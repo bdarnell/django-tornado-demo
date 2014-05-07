@@ -20,6 +20,7 @@ class HelloHandler(tornado.web.RequestHandler):
     self.write('Hello from tornado')
 
 def main():
+  parse_command_line()
   wsgi_app = tornado.wsgi.WSGIContainer(
     django.core.handlers.wsgi.WSGIHandler())
   tornado_app = tornado.web.Application(
