@@ -12,6 +12,7 @@ import tornado.httpserver
 import tornado.ioloop
 import tornado.web
 import tornado.wsgi
+django.setup()
 
 define('port', type=int, default=8080)
 
